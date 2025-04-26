@@ -1,0 +1,405 @@
+/* workflow-frontend/css/style.css */
+/* Styles globaux pour l'application WorkFlow */
+
+:root {
+    --primary-color: #b0e2ff; /* Bleu clair */
+    --secondary-color: #87ceeb; /* Bleu ciel */
+    --accent-color: #ffa07a; /* Saumon clair */
+    --text-color: #333; /* Gris foncé */
+    --background-color: #f0f8ff; /* Blanc cassé */
+    --border-color: #ddd; /* Gris clair */
+
+    /* Couleurs améliorées (pour cohérence avec le style précédent) */
+    --primary-color-enhanced: #845ec2; /* Violet principal */
+    --secondary-color-enhanced: #45cafc; /* Bleu secondaire */
+    --accent-color-enhanced: #ff6f61; /* Corail */
+    --bg-light: #f9f9f9;
+    --bg-lighter: #f5f3ff;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police plus moderne */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-lighter); /* Utiliser la variable existante */
+    color: var(--text-primary);/* Utiliser la variable existante */
+    line-height: 1.7; /* Amélioration de la lisibilité */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color-enhanced); /* Utiliser la couleur améliorée */
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+/*background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+color: #fff;
+padding: 1.5rem 2rem;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+position: sticky;
+top: 0;
+z-index: 100;*/
+header {
+    background: linear-gradient(to right, var(--secondary-color-enhanced), var(--primary-color-enhanced)); /* Dégradé amélioré */
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.7rem; /* Légèrement plus grand */
+    font-weight: bold;
+    color: #fff; /* Texte blanc sur le header */
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-container {
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#logo-container img {
+    height: 60px;
+}
+
+#logo-container span { /* Si vous voulez ajouter un texte de marque */
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Texte blanc sur le header */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.4rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    color: #fff; /* Garder le texte blanc au survol */
+}
+
+main {
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer {
+   
+    background-color: var(--bg-light); /* Utiliser une couleur claire pour le footer */
+    color: var(--text-secondary); /* Utiliser une couleur de texte secondaire */
+    text-align: center;  
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--accent-color-enhanced); /* Utiliser la couleur d'accent améliorée */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65a50; /* Nuance plus foncée de l'accent amélioré */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--secondary-color); /* Utiliser la couleur secondaire existante */
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.error-message {
+    color: #f44336;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.overview > article {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.overview h3 {
+    margin-top: 0;
+    color: var(--secondary-color); /* Utiliser la couleur secondaire existante */
+}
+
+.overview ul {
+    list-style: none;
+    padding: 0;
+}
+
+.overview li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.overview li:last-child {
+    border-bottom: none;
+}
+
+.overview a {
+    color: var(--secondary-color); /* Utiliser la couleur secondaire existante */
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.overview a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour la Welcome Page (intégration) */
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff; /* Texte blanc sur le dégradé du hero */
+}
+
+.hero-content .button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.hero-content .button.primary {
+    background-color: var(--accent-color-enhanced);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero-content .button.primary:hover {
+    background-color: #e65a50;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content .button.secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.hero-content .button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#hero {
+    background: linear-gradient(135deg, var(--secondary-color-enhanced), var(--primary-color-enhanced));
+    padding: 5rem 20px;
+    border-radius: 0.8rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#features {
+    padding: 4rem 20px;
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+#features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color-enhanced);
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color-enhanced);
+    margin-bottom: 1.2rem;
+}
+
+.feature-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color-enhanced);
+}
+
+#call-to-action {
+    background-color: var(--secondary-color-enhanced);
+    color: #fff;
+    padding: 4rem 20px;
+    text-align: center;
+    border-radius: 0.8rem;
+    margin: 4rem 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#call-to-action h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+#call-to-action p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+#call-to-action .button.primary.large {
+    background-color: var(--accent-color-enhanced);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-size: 1.2rem;
+    padding: 1.2rem 2.5rem;
+}
+
+#call-to-action .button.primary.large:hover {
+    background-color: #e65a50;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+
+   
+
+    h1 {
+        margin-right: auto; /* Pousse tout ce qui suit vers la droite */
+        margin-left: 10px; /* Espace après le logo */
+    }
+
+ 
+
+
+ 

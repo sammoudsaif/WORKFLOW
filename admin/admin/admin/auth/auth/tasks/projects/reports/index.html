@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkFlow - Rapports</title>
+    <link rel="stylesheet" href="../../../../../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../../../../../css/reports.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div id="logo-container">
+                <img src="../../../../../../../../WorkflowLogo.png" alt="Logo WorkFlow">
+            </div>
+        <h1>Rapports</h1>
+        <nav>
+            <ul>
+                <li><a href="../../../../../../../../WelcomPage.html">Se déconnecter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="reports-header">
+            <h2>Gestion des Rapports</h2>
+            <div id="reports-filter">
+                <label for="report-type">Type de Rapport:</label>
+                <select id="report-type">
+                    <option value="activity">Activité des Utilisateurs</option>
+                    <option value="project">Avancement des Projets</option>
+                    <option value="task">Statut des Tâches</option>
+                    </select>
+                <label for="report-date">Période:</label>
+                <input type="date" id="report-date">
+                <button id="generate-report">Générer</button>
+            </div>
+        </section>
+
+        <section id="reports-list">
+            <div class="report-item">
+                <h4>Rapport d'Activité - 10/04/2024</h4>
+                <p>Nombre de tâches terminées: 25</p>
+                <p>Nombre de projets en cours: 5</p>
+                <a href="#">Voir le rapport complet</a>
+            </div>
+
+            <div class="report-item">
+                <h4>Rapport d'Avancement - Projet A</h4>
+                <p>Pourcentage d'achèvement: 70%</p>
+                <p>Nombre de tâches en retard: 2</p>
+                <a href="#">Voir le rapport complet</a>
+            </div>
+
+            </section>
+    </main>
+
+    <footer>
+        <p>© 2025 WorkFlow</p>
+    </footer>
+
+    <script src="js/reports.js"></script>
+    </body>
+
+</html>

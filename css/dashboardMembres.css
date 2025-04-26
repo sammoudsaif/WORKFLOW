@@ -1,0 +1,77 @@
+/* member-dashboard-simple.css */
+
+#dashboard {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    /* Center the dashboard */
+    max-width: 800px;
+    /* Limit the width */
+}
+
+#dashboard h2 {
+    color: #845ec2;
+    /* Or your theme color */
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Stack the sections */
+    gap: 2rem;
+}
+
+.tasks-summary,
+.notifications-summary {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.tasks-summary h3,
+.notifications-summary h3 {
+    color: #45cafc;
+    /* Or your theme color */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+#recent-tasks-list,
+#notifications-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#recent-tasks-list li,
+#notifications-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#recent-tasks-list li:last-child,
+#notifications-list li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive (Optional) */
+@media (max-width: 600px) {
+    #dashboard {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e0f3ff;
+    color: #777;
+    border-top: 1px solid #cce0f5;
+}

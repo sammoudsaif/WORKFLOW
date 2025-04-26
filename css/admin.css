@@ -1,0 +1,165 @@
+/* workflow-frontend/css/admin.css */
+/* Styles spécifiques aux pages d'administration */
+
+#admin-dashboard h2,
+#users-management h2,
+#create-admin-form h1 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.admin-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.admin-overview > article {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.admin-overview h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+#users-table {
+    margin-top: 2rem;
+}
+
+#users-table th {
+    background-color: #87ceeb;
+}
+
+.admin-actions {
+    margin-bottom: 1rem;
+}
+
+.admin-actions button {
+    margin-right: 0.5rem;
+}
+h1 {
+    margin-right: auto;
+    margin-left: 10px; 
+}
+h1 {
+    margin-right: auto;
+    margin-left: 10px; 
+}
+main {
+    padding: 2rem;
+}
+
+#users-header {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#users-header button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#users-header button:hover {
+    background-color: #0056b3;
+}
+
+#users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user-item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-actions button {
+    margin-left: 0.5rem;
+    color: #007bff;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-actions button:hover {
+    color: #0056b3;
+}
+
+#user-details {
+    /* Styles pour les détails de l'utilisateur */
+    background-color: #f0f8ff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
+/* Footer et Responsive */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e0f3ff;
+    color: #777;
+    border-top: 1px solid #cce0f5;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    #users-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #users-header button {
+        margin-top: 1rem;
+    }
+
+    .user-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-actions {
+        margin-top: 0.5rem;
+    }
+}
